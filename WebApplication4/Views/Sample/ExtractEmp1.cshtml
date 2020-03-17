@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "ExtractEmp";
+}
+
+<h2>ExtractEmp</h2>
+@using (Html.BeginForm())
+{
+    if (ViewBag.E != null)
+    {
+        <table>
+            <tr>
+                <td>Empno</td>
+                <td>@Html.TextBox("EMPNO",(object)ViewBag.E.EMPNO)</td>
+            </tr>
+            <tr>
+                <td>Ename</td>
+                <td>@Html.TextBox("ENAME",(object)ViewBag.E.ENAME)</td>
+            </tr>
+            <tr>
+                <td>Job</td>
+                <td>@Html.TextBox("JOB",(object)ViewBag.E.JOB)</td>
+            </tr>
+            <tr>
+                <td>Mgr id</td>
+                <td>@Html.TextBox("MGR",(object)ViewBag.E.MGR)</td>
+            </tr>
+            <tr>
+                <td>HIREDATE</td>
+                <td>@Html.TextBox("HD",(object)ViewBag.E.HIREDATE)</td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>@Html.TextBox("SAL",(object)ViewBag.E.SAL)</td>
+            <tr>
+                <td>Comm</td>
+                <td>@Html.TextBox("COMM",(object)ViewBag.E.COMM)</td>
+            </tr>
+
+            <tr>
+                <td>Deptno</td>
+                <td>@Html.TextBox("DEPTNO",(object)ViewBag.E.DEPTNO)</td>
+            </tr>
+
+
+        </table>
+    }
+
+
+}

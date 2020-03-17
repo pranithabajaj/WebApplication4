@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("ExtractEmp1", "Sample"))
+{
+    <table>
+        <tr>
+            <td>Empno</td>
+            <td>Ename</td>
+            <td>Job</td>
+            <td>Mgr</td>
+            <td>HireDate</td>
+            <td>Sal</td>
+            <td>Comm</td>
+            <td>Deptno</td>
+        </tr>
+        @if (ViewBag.L!= null)
+        {
+            foreach (var E in ViewBag.L as IList<WebApplication4.Models.EMPDATA>)
+            {
+                <tr>
+                    <td>@Html.RadioButton("rdbEmp", E.EMPNO)</td>
+                    <td>@E.EMPNO</td>
+                    <td>@E.ENAME</td>
+                    <td>@E.JOB</td>
+                    <td>@E.MGR</td>
+                    <td>@E.HIREDATE</td>
+                    <td>@E.SAL</td>
+                    <td>@E.COMM</td>
+                    <td>@E.DEPTNO</td>
+                </tr>
+            }
+
+
+        }
+
+
+
+    </table>
+    <input type="submit" />
+
+}
